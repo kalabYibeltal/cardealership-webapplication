@@ -2,7 +2,7 @@
 import Navbar from "./navbar";
 import Home from "./home";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import  Create  from "./create";
+import  UpdateProfile  from "./updateprofile";
 import Cardetails from "./cardetail";
 import Cardetailsold from "./cardetailold";
 import Pagenon from "./pageunfound";
@@ -21,8 +21,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/create">
-            <Create />
+          <Route path="/updateprofile">
+            <UpdateProfile />
           </Route>
           <Route path="/car/:id"> 
             <Cardetails/>

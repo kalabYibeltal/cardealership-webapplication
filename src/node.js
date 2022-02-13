@@ -77,7 +77,20 @@ app.post('/oldcarsorder',function(req, res){
     console.log("hello")
     let model=req.body.model
     let date=new Date()
-	database.query("INSERT INTO order_car (idCustomer,quantity,orderDate,modelId,carStatus) VALUES (1,1,'"+date+"','"+model+"','old')",(err,response)=>{
+	database.query("update cus INTO order_car (idCustomer,quantity,orderDate,modelId,carStatus) VALUES (1,1,'"+date+"','"+model+"','old')",(err,response)=>{
+        if(response) res.send(response)
+        console.log(err)
+        // res.send(err)
+    })
+    //console.log(cars)
+    
+});
+
+app.post('/profile',function(req, res){
+    console.log("hello")
+    let model=req.body.model
+    let date=new Date()
+	database.query("update INTO order_car (idCustomer,quantity,orderDate,modelId,carStatus) VALUES (1,1,'"+date+"','"+model+"','old')",(err,response)=>{
         if(response) res.send(response)
         console.log(err)
         // res.send(err)
