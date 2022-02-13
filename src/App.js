@@ -3,9 +3,11 @@ import Navbar from "./navbar";
 import Home from "./home";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import  Create  from "./create";
-import Blogdetails from "./blogdetail";
+import Cardetails from "./cardetail";
+import Cardetailsold from "./cardetailold";
 import Pagenon from "./pageunfound";
 import About from "./about";
+
 
 function App() {
   // const title= "welcome to the new blog";
@@ -22,8 +24,11 @@ function App() {
           <Route path="/create">
             <Create />
           </Route>
-          <Route path="/blogs/:id"> 
-            <Blogdetails/>
+          <Route path="/car/:id"> 
+            <Cardetails/>
+          </Route>
+          <Route path="/carold/:id"> 
+            <Cardetailsold/>
           </Route>
           <Route path="/about">
             <About />
